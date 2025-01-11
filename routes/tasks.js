@@ -9,7 +9,10 @@ function getRandomInteger() {
 router.get("/exercise", async (req, res, next) => {
     console.log("exercise requested");
 
-    const output = {v1: getRandomInteger(), v2: getRandomInteger(), result: v1 * v2};
+    const v1 = getRandomInteger();
+    const v2 = getRandomInteger();
+
+    const output = {v1: v1, v2: v2, result: v1 * v2};
 
     res.json(output);
 });
